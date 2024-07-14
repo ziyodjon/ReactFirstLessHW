@@ -1,22 +1,24 @@
 import { useState } from "react";
+import AddToBasketBtn from "./AddToBasketBtn";
 import { FaHeart } from "react-icons/fa6";
-import Basket from "./Basket";
 
-function Product({ img, desc, alt, price }) {
+export default function Product({ img, desc, alt, price }) {
   const [chosenGoods, setChosenGoods] = useState(false);
 
   return (
     <div className={chosenGoods ? "card chosen-card" : "card"}>
-      <FaHeart
-        className={chosenGoods ? "heart-icon chosen-heart" : "heart-icon"}
+      <button
+        className={"heart-icon"}
         onClick={() => setChosenGoods(!chosenGoods)}
-      />
-      <img src={img} width="260" alt={alt} />
+      >
+        <FaHeart className={chosenGoods ? "chosen-heart" : ""} />
+      </button>
+      <div className="product-image">
+        <img src={img} width="260" alt={alt} />
+      </div>
       <p className="desk">{desc}</p>
       <p className="price">{price}</p>
-      <Basket />
+      <AddToBasketBtn />
     </div>
   );
 }
-
-export default Product;

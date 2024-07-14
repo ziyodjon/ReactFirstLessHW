@@ -41,7 +41,23 @@ body {
   right: 24px;
   cursor: pointer;
   transition: 0.2s;
+  border: 0;
+  background: none;
 }
+
+.chosen-card {
+  /* -webkit-box-shadow: 0px 2px 45px 5px rgba(240, 60, 9, 0.46);
+  -moz-box-shadow: 0px 2px 45px 5px rgba(240, 60, 9, 0.46);
+  box-shadow: 0px 2px 45px 5px rgba(240, 60, 9, 0.46); */
+
+  box-shadow: 0px 0px 23.8px 6px #ff195e40;
+}
+.chosen-heart {
+  color: #ff195e;
+
+  transition: 0.3s;
+}
+
 .basket-btn {
   font-size: 18px;
   color: #000;
@@ -57,20 +73,13 @@ body {
 .basket-btn:hover {
   background: #ece50a;
 }
-.chosen-card {
-  /* -webkit-box-shadow: 0px 2px 45px 5px rgba(240, 60, 9, 0.46);
-  -moz-box-shadow: 0px 2px 45px 5px rgba(240, 60, 9, 0.46);
-  box-shadow: 0px 2px 45px 5px rgba(240, 60, 9, 0.46); */
 
-  box-shadow: 0px 0px 23.8px 6px #ff195e40;
-}
-.chosen-heart {
-  color: #ff195e;
-}
 .counter-wrap {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
 }
 .counter-minus-btn,
 .counter-plust-btn {
@@ -90,9 +99,8 @@ body {
   background-color: #fff500;
 }
 
-.counter-value {
-  font-size: 24px;
-  text-align: center;
-  border: 0;
-  width: 100%;
+.product-image {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }

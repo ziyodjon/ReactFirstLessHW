@@ -1,8 +1,10 @@
-import productImage from "../assets/mountain-bicycle.webp";
-import "../index.css";
-import Product from "./Product";
+import Product from "./components/Product";
 
-function App() {
+import "./index.css";
+
+import productImage from "./assets/mountain-bicycle.webp";
+
+export function App() {
   return (
     <main className="goods-wrap">
       <Product
@@ -34,5 +36,3 @@ function App() {
     </main>
   );
 }
-
-export { App };
