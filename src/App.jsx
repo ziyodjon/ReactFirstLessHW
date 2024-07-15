@@ -4,7 +4,7 @@ import "./index.css";
 
 import productImage from "./assets/mountain-bicycle.webp";
 
-export function App() {
+export default function App() {
   return (
     <main className="goods-wrap">
       <Product
