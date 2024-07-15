@@ -1,12 +1,12 @@
 import { useState } from "react";
-import Btn from "./Btn";
+import Button from "./Button";
 
 export default function AddToBasketBtn() {
   const [count, setCount] = useState(0);
 
   if (count === 0) {
     return (
-      <Btn
+      <Button
         text="В корзину"
         handleClick={() => setCount(count + 1)}
         classes="basket-btn"
@@ -16,13 +16,13 @@ export default function AddToBasketBtn() {
 
   return (
     <div className="counter-wrap">
-      <Btn
+      <Button
         text="-"
         handleClick={() => setCount(count - 1)}
         classes="counter-minus-btn"
       />
       {count}
-      <Btn
+      <Button
         text="+"
         handleClick={() => setCount(count + 1)}
         classes="counter-plust-btn"
